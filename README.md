@@ -2,6 +2,10 @@
 
 Interactive Shiny app that converts raw qPCR machine output (Format 2 TXT) into a tidy CSV ready for downstream R analysis.
 
+## Why
+
+R's analysis scripts here read CSV, but the qPCR machine exports Format 2 as TXT with wells labeled only by position (e.g. `B3`, `B4`). Previously this meant opening the raw file in Excel and manually renaming each well to a sample name before it could be tidied into CSV — tedious and error-prone. This app does that renaming step interactively (click wells → type a sample name) and exports the tidy CSV directly, skipping Excel entirely.
+
 ## What it does
 
 1. Upload the TXT file exported from the qPCR machine (Format 2)
